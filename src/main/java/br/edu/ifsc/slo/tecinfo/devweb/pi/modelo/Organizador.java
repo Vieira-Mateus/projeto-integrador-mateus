@@ -5,53 +5,44 @@
  */
 package br.edu.ifsc.slo.tecinfo.devweb.pi.modelo;
 
+import javax.lang.model.SourceVersion;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  *
  * @author mateu
  */
-public class Player {
-    private int codPlayer;
-    private int cpf;
-    private int rg;
+@Entity
+public class Organizador {
+     @Id
+     @GeneratedValue(strategy = GenerationType.AUTO)
+    private int codCadastro;
     private String nome;
+    private String instituicao;
     private String email;
     private String login;
     private int senha;
-    
-    public  Player(int codPlayer, int cpf, int rg, String nome, String email, String login, int senha){
-        this.codPlayer = codPlayer;
-        this.cpf = cpf;
-        this.rg = rg;
+
+public   Organizador(int codCadastro, String nome, String instituicao, String email, String login, int senha) {
+        this.codCadastro = codCadastro;
         this.nome = nome;
+        this.instituicao = instituicao;
         this.email = email;
         this.login = login;
         this.senha = senha;
-        
-        
+ 
+
 }
 
-    public int getCodPlayer() {
-        return codPlayer;
+    public int getCodCadastro() {
+        return codCadastro;
     }
 
-    public void setCodPlayer(int codPlayer) {
-        this.codPlayer = codPlayer;
-    }
-
-    public int getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(int cpf) {
-        this.cpf = cpf;
-    }
-
-    public int getRg() {
-        return rg;
-    }
-
-    public void setRg(int rg) {
-        this.rg = rg;
+    public void setCodCadastro(int codCadastro) {
+        this.codCadastro = codCadastro;
     }
 
     public String getNome() {
@@ -60,6 +51,14 @@ public class Player {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getInstituicao() {
+        return instituicao;
+    }
+
+    public void setInstituicao(String instituicao) {
+        this.instituicao = instituicao;
     }
 
     public String getEmail() {
@@ -85,4 +84,4 @@ public class Player {
     public void setSenha(int senha) {
         this.senha = senha;
     }
-    }
+}

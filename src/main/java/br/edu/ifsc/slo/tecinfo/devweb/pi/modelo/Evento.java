@@ -9,7 +9,7 @@ package br.edu.ifsc.slo.tecinfo.devweb.pi.modelo;
  *
  * @author mateu
  */
-public class Eventos {
+public class Evento {
     private int codEvento;
     private String nomeDoEvento;
     private String game;
@@ -19,7 +19,7 @@ public class Eventos {
     private String linck;
     private String premiacao;
    
-    public   Eventos(int codEvento, String nomeDoEvento, String game, String vagas, int data, int horario, String linck, String premiacao){
+    public   Evento(int codEvento, String nomeDoEvento, String game, String vagas, int data, int horario, String linck, String premiacao){
         this.codEvento = codEvento;
         this.nomeDoEvento = nomeDoEvento;
         this.game = game;
